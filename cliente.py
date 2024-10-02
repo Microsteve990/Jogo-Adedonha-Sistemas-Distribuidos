@@ -1,7 +1,7 @@
 import socket
 
 # Configurações do cliente
-HOST = '127.0.0.1'
+HOST = '25.1.48.60'
 PORT = 65432
 
 def start_client():
