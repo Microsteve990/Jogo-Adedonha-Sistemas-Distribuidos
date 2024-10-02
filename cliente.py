@@ -1,7 +1,7 @@
 import socket
 
 # Configurações do cliente
-HOST = '25.1.48.60'
+HOST = ' ' #Inserir no espaço entre aspas simples o ip do computador de quem está rodando o servidor
 PORT = 65432
 
 def start_client():

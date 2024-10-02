@@ -6,7 +6,7 @@ from PyDictionary import PyDictionary
 from deep_translator import PonsTranslator
 
 # Configurações do servidor
-HOST = '25.1.48.60'
+HOST = ' ' #Inserir no espaço entre aspas simples o ip do computador de quem irá rodar o servidor
 PORT = 65432
 
 # Categorias do jogo
@@ -35,7 +35,7 @@ def handle_client(conn, addr):
     
     # Gera uma letra aleatória
     letter = random.choice(string.ascii_uppercase)
-    conn.sendall(f'=================================== Regras ===================================\n1- Escreva palavras com a letra sorteada\n2- Não colocar palavras compostas\n3- Não colocar palavras que possuem acento\n4- Separe as palavras por espaço e vírgula "Pato, Paris, Papel"\n6- Como não temos a checagem de categoria, por favor respeite as categorias\n------------------------------------------------------------------------------\n*** A PONTUAÇÃO SERÁ FEITA COM BASE NO TAMANHO DA PALAVRA ***\nLetra: {letter}\nCategorias: {', '.join(categories)}\n=============================================================================='.encode())
+    conn.sendall(f'=================================== Regras ===================================\n1- Escreva palavras com a letra sorteada\n2- Não colocar palavras compostas\n3- Não colocar palavras que possuem acento\n4- Separe as palavras por espaço e vírgula "Pato, Peru, Papel"\n6- Como não temos a checagem de categoria, por favor respeite as categorias\n------------------------------------------------------------------------------\n*** A PONTUAÇÃO SERÁ FEITA COM BASE NO TAMANHO DA PALAVRA ***\nLetra: {letter}\nCategorias: {', '.join(categories)}\n=============================================================================='.encode())
     
     # Recebe a resposta do jogador
     data = conn.recv(1024).decode().strip().split(',')
